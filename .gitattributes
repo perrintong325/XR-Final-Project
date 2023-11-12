@@ -4,3 +4,6 @@
 *.blend1 filter=lfs diff=lfs merge=lfs -text
 openPoseScene.blend filter=lfs diff=lfs merge=lfs -text
 0_a001_Talk.glb filter=lfs diff=lfs merge=lfs -text
+.pth filter=lfs diff=lfs merge=lfs -text
+*.pth filter=lfs diff=lfs merge=lfs -text
+body_pose_model.pth filter=lfs diff=lfs merge=lfs -text
