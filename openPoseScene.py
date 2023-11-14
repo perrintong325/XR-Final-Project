@@ -54,3 +54,4 @@ annotated_imageL = draw_landmarks_on_image(imageLmp.numpy_view(), detection_resu
 annotated_imageR = draw_landmarks_on_image(imageRmp.numpy_view(), detection_resultR)
 cv2.imwrite("annotated_imageL.png", annotated_imageL)
 cv2.imwrite("annotated_imageR.png", annotated_imageR)
+
