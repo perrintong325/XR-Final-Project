@@ -62,9 +62,8 @@ projectionR = np.matmul(mtx2, extrinsicsR)
 
 # mediapipe pose detection
 base_options = python.BaseOptions(model_asset_path='pose_landmarker_heavy.task')
-options = vision.PoseLandmarkerOptions(
-    base_options=base_options,
-output_segmentation_masks=True)
+options = vision.PoseLandmarkerOptions(base_options=base_options, 
+                                       output_segmentation_masks=True)
 detector = vision.PoseLandmarker.create_from_options(options)
 detection_resultL = detector.detect(imageLmp)
 detection_resultR = detector.detect(imageRmp)
