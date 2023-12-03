@@ -57,9 +57,6 @@ def detection():
                 break
         else:
             print("camera not working")
-        time_elapsed = time.time() - start_time
-        if time_elapsed < 1./60:  # we aim for 30 fps
-            time.sleep(1./60 - time_elapsed)
 
 if __name__ == "__main__":
     detection()

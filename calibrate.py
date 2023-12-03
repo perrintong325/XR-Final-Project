@@ -1,5 +1,5 @@
 import cv2
-from pupil_apriltags import Detector
+from dt_apriltags import Detector
 import numpy as np
 import os
 import mediapipe as mp
@@ -19,7 +19,7 @@ def calibrate(image):
     mtx2 = np.hstack((mtx, zeros))
     camera_params = (mtx[0,0], mtx[1,1], mtx[0,2], mtx[1,2])
     results = atDetector.detect(image, estimate_tag_pose=True, 
-                                camera_params=camera_params, tag_size=0.249)
+                                camera_params=camera_params, tag_size=0.168)
     extrinsics = np.vstack((np.hstack((results[0].pose_R, results[0].pose_t)), [0,0,0,1]))
     extrinsics = np.linalg.inv(extrinsics)
     projection = np.matmul(mtx2, extrinsics)
