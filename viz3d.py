@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import numpy as np
 import os
-plt.style.use('ggplot')
+# plt.style.use('ggplot')
 print(os.getcwd())
 
 def viz(points_3ds):
@@ -14,7 +14,6 @@ def viz(points_3ds):
         y = points_3d[1,:]
         z = points_3d[2,:]
 
-        print(z)
         ax.plot(xs = [x[11], x[23]], ys = [y[11], y[23]], zs = [z[11], z[23]], linewidth = 4, c = 'r')
         ax.plot(xs = [x[23], x[25]], ys = [y[23], y[25]], zs = [z[23], z[25]], linewidth = 4, c = 'r')
         ax.plot(xs = [x[25], x[27]], ys = [y[25], y[27]], zs = [z[25], z[27]], linewidth = 4, c = 'r')
